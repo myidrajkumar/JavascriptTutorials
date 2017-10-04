@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Form Validation Attributes Example</title>
+    
+    <script src="../js/FormValidation.js"></script>
+</head>
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>
+                <strong>Add your comment</strong>
+            </legend>
+            
+            <p>
+                <label for="author">Name<abbr title="Required">*</abbr></label>
+                <input id="author" 
+                       name="author" 
+                       pattern="^([- \w\d\u00c0-\u024f]+)$"
+                       size="20" 
+                       spellcheck="false" 
+                       title="Your name (no special characters)"
+                       type="text"
+                       required="required">
+            </p>
+            
+            <p>
+                <label for="email">Email<abbr title="Required">*</abbr></label>
+                <input id="email" 
+                       name="email" 
+                       pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$"
+                       size="30" 
+                       spellcheck="false" 
+                       title="Your email address"
+                       type="email"
+                       required="required">
+            </p>
+            
+            <p>
+                <label for="website">Website</label>
+                <input id="website" 
+                       name="website"
+                       pattern="^(http[s]?:\/\/)?([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2}(\/([-~%\.\(\)\w\d]*\/*)*(#[-\w\d]+)?)?$"
+                       size="30" 
+                       spellcheck="false" 
+                       title="Your website address"
+                       type="url">
+            </p>
+            
+            <p>
+                <label for="text">Comment</label>
+                <textarea id="text" 
+                       name="text"
+                       rows="10"
+                       cols="40"
+                       spellcheck="true" 
+                       title="Your website address"
+                       required="required">
+                </textarea>
+            </p>            
+        </fieldset>
+        <fieldset>
+                <button name="preview" type="submit">Preview</button>
+                <button name="save" type="submit">Submit Comment</button>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -14,8 +14,8 @@ names[0] = 'Kamal';
 duplicateNames[1] = 'Ajith';
 
 console.log("After changing different element in both arrays, \n" + 
-		"Names Array ==> " + names + "\n"
-		+"Copied Names Array ==> " + duplicateNames);
+        "Names Array ==> " + names + "\n"
+        +"Copied Names Array ==> " + duplicateNames);
 
 //concatenation
 const concatenatedNames = [...names, ...names];
@@ -30,7 +30,7 @@ console.log("Appended Names Array ==> " + asLast);
 
 //In function calls
 const firstTwoNames = (name1, name2) => {
-	console.log("First 2 Names in Appened Array ==> ['" + name1 + "', '" + name2 + "']");
+    console.log("First 2 Names in Appened Array ==> ['" + name1 + "', '" + name2 + "']");
 }
 
 //Note that if too many arguments present, then extra arguments will be omitted
