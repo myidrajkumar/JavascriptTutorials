@@ -16,7 +16,7 @@ let person = {
 
 console.log("Old Approach =>  { Name:  " + person.getName() + ", Age: " + person.getAge() + "}");
 
-/* Above can be shortened with the following approach in ES6
+/* Above can be shortened with the following approach in ES6.
  * Is this approach has to be applied to only for objects?  What is the best practice??
  */
 
