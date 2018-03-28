@@ -17,9 +17,9 @@ function destructureArrayData() {
     const actors = ['Rajini', 'Kamal', 'Ajith', 'Vijay'];
 
     /*
-     * Wrapping a variable declaration with square brackets ==> Take the first
-     * element from actors and assign it to the variable
-     */
+	 * Wrapping a variable declaration with square brackets ==> Take the first
+	 * element from actors and assign it to the variable
+	 */
     const [firstName] = actors;
     console.log("First Name ==> " + firstName);
 
@@ -32,10 +32,10 @@ function destructureArrayData() {
             fourthActor + "' }");
 
     /*
-     * In extraction, if the structure contains less elements, then referred
-     * element will be 'undefined'. In our example, names array contains four
-     * elements but we will refer 5th element too.
-     */
+	 * In extraction, if the structure contains less elements, then referred
+	 * element will be 'undefined'. In our example, names array contains four
+	 * elements but we will refer 5th element too.
+	 */
     const [name1, name2, name3, name4, name5] = actors;
     console.log("Not present element is referred ==> { '" + name1 + "', '" + 
             name2 + "', '" + name3 + "', '" + name4 + "', '" + name5  + "' }");
@@ -68,15 +68,19 @@ function destructureObjectData() {
             }
     };
     
-    const {name, age} = person;
+    {
+    let {name, age} = person;
     console.log("Extracted from person object ==> { Name: '" + name + "', Age: '" + age + "' }");
+    }
     
-    const {name1, facts : {hobby}} = person;
-    console.log("Nested value from person object ==> { Name: '" + name1 + "', Hobby: '" + hobby + "' }");
-    
-    const {name2, hometown = 'Hosur'} = person;
-    console.log("Default value from person object when missing==> { Name: '" + name2 + "', Home Town: '" + hometown + "' }");
-    
+    {
+    let {name, facts : {hobby}} = person;
+    console.log("Nested value from person object ==> { Name: '" + name + "', Hobby: '" + hobby + "' }");
+    }
+    {
+    let {name, hometown = 'Hosur'} = person;
+    console.log("Default value from person object when missing==> { Name: '" + name + "', Home Town: '" + hometown + "' }");
+    }
     const simpleFunction = ({name, age}) => {
         return `${name} is ${age} years old`;
     }
